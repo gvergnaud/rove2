@@ -1,0 +1,419 @@
+{
+  "player": {
+    "list": [
+      "showreel",
+      "lerreur",
+      "moetta6",
+      "under-the-sign",
+      "addicted-to-the-void"
+    ],
+    "showreel": {
+      "videoUrls": {
+        "1080": "/static/images/home/reel.mp4",
+        "720": "/static/images/home/reel_720.mp4"
+      },
+      "imageUrl": "/static/images/home/player-image.jpg",
+      "backgroundRgba": [13, 13, 13, 255],
+      "highlightRgba": [32, 33, 92, 255],
+      "backRoute": {
+        "name": "home",
+        "params": {}
+      }
+    },
+    "lerreur": {
+      "videoUrls": {
+        "1080": "/static/images/casestudies/lerreur/lerreur.mp4",
+        "720": "/static/images/casestudies/lerreur/lerreur_720.mp4"
+      },
+      "imageUrl": "/static/images/casestudies/lerreur/player-image.jpg",
+      "backgroundRgba": [13, 13, 13, 255],
+      "highlightRgba": [38, 32, 106, 255],
+      "backRoute": {
+        "name": "casestudy",
+        "params": { "name": "lerreur" }
+      }
+    },
+    "moetta6": {
+      "videoUrls": {
+        "1080": "/static/images/casestudies/moetta/moetta.mp4",
+        "720": "/static/images/casestudies/moetta/moetta_720.mp4"
+      },
+      "imageUrl": "/static/images/casestudies/moetta/player-image.jpg",
+      "backgroundRgba": [13, 13, 13, 255],
+      "highlightRgba": [98, 194, 174, 255],
+      "backRoute": {
+        "name": "casestudy",
+        "params": { "name": "moetta6" }
+      }
+    },
+    "under-the-sign": {
+      "videoUrls": {
+        "1080": "/static/images/casestudies/under/under.mp4",
+        "720": "/static/images/casestudies/under/under_720.mp4"
+      },
+      "imageUrl": "/static/images/casestudies/under/player-image.jpg",
+      "backgroundRgba": [13, 13, 13, 255],
+      "highlightRgba": [217, 163, 206, 255],
+      "backRoute": {
+        "name": "casestudy",
+        "params": { "name": "under-the-sign" }
+      }
+    },
+    "addicted-to-the-void": {
+      "videoUrls": {
+        "1080": "/static/images/casestudies/addicted/addicted.mp4",
+        "720": "/static/images/casestudies/addicted/addicted_720.mp4"
+      },
+      "imageUrl": "/static/images/casestudies/addicted/player-image.jpg",
+      "backgroundRgba": [13, 13, 13, 255],
+      "highlightRgba": [175, 215, 221, 255],
+      "backRoute": {
+        "name": "casestudy",
+        "params": { "name": "addicted-to-the-void" }
+      }
+    }
+  },
+  "home": {
+    "meta": {
+      "title": "Rove — Films Production",
+      "description": "WE DO MUSIC VIDEO / ADS / DOCUMENTARY / MOTION DESIGN / CORPORATE / SHORTS / AND MUCH MORE.",
+      "url": "https://rove.fr",
+      "image": "/static/images/rsRove.jpg"
+    },
+    "showreel": {
+      "play": "showreel",
+      "videoLoopUrl": "/static/images/home/loop-reel.mp4",
+      "videoLoopMobile": "/static/images/home/loop-reel-mobile.jpg",
+      "player": "showreel"
+    },
+    "films": {
+      "weAre": "We are ",
+      "rove": "ROVE",
+      "aStudioMaking": "a studio making",
+      "adjective": "beautiful",
+      "films": "films",
+      "projects": {
+        "project1": {
+          "name": "lerreur",
+          "backImg": "/static/images/home/lerreur-back.jpg",
+          "frontImg": "/static/images/home/lerreur-front.jpg",
+          "backVideo": "/static/images/home/lerreur-back.mp4",
+          "frontVideo": "/static/images/home/lerreur-front.mp4"
+        },
+        "project2": {
+          "name": "moetta6",
+          "backImg": "/static/images/home/moetta-back.jpg",
+          "frontImg": "/static/images/home/moetta-front.jpg",
+          "backVideo": "/static/images/home/moetta-back.mp4",
+          "frontVideo": "/static/images/home/moetta-front.mp4"
+        },
+        "project3": {
+          "name": "under-the-sign",
+          "backImg": "/static/images/home/under-back.jpg",
+          "frontImg": "/static/images/home/under-front.jpg",
+          "backVideo": "/static/images/home/under-back.mp4",
+          "frontVideo": "/static/images/home/under-front.mp4"
+        },
+        "project4": {
+          "name": "addicted-to-the-void",
+          "backImg": "/static/images/home/addicted-back.jpg",
+          "frontImg": "/static/images/home/addicted-front.jpg",
+          "backVideo": "/static/images/home/addicted-back.mp4",
+          "frontVideo": "/static/images/home/addicted-front.mp4"
+        }
+      }
+    },
+    "about": {
+      "weRoveThrough": "We rove through",
+      "ideasAndConcepts": "ideas & concepts",
+      "guidedBy": "guided by",
+      "artDirection": "art direction",
+      "andTheWillTo": "and the will to",
+      "experiment": "experiment",
+      "newNarrative": " new narrative",
+      "paths": "paths",
+      "alongWithThe": "along with the",
+      "ambition": "ambition",
+      "toChallenge": "to challenge",
+      "technicalSkills": "technical skills."
+    },
+    "services": {
+      "weTakeCare": "we take care",
+      "ofEverything": "of everything",
+      "services": [
+        {
+          "title": "content strategy",
+          "icon": "strategy"
+        },
+        {
+          "title": "digital campaigns",
+          "icon": "digital"
+        },
+        {
+          "title": "creative direction",
+          "icon": "creative"
+        },
+        {
+          "title": "prod (pre/pro/post)",
+          "icon": "prod"
+        }
+      ],
+      "skills": [
+        "Writing",
+        "Screenplay",
+        "Storyboard",
+        "Art Direction",
+        "Casting",
+        "Location scouting",
+        "Lighting",
+        "Directing",
+        "Shooting",
+        "Photos",
+        "Audio recording",
+        "Aerial views",
+        "Editing",
+        "Sound design",
+        "Color grading",
+        "Motion design",
+        "Music creation"
+      ]
+    },
+    "clients": {
+      "weWorkWith": "we work with",
+      "clients": [
+        "BMW",
+        "Pinterest",
+        "Danone",
+        "Uber",
+        "Etam x Goodkids",
+        "Arte",
+        "Au Bureau x Conceptory",
+        "Sopra Steria",
+        "Crème de la crème",
+        "Veja"
+      ]
+    },
+    "contact": {
+      "getInTouch": "Get in touch",
+      "email": "hello@rove.fr",
+      "phone": "+33 (0)6 59 25 98 68",
+      "addressLine1": "87 rue Victor Hugo",
+      "addressLine2": "93170 Bagnolet",
+      "vimeo": "https://vimeo.com/rovesquad",
+      "instagram": "https://www.instagram.com/rove.squad/"
+    }
+  },
+  "caseStudy": {
+    "nextFilm": "next film",
+    "order": [
+      "lerreur",
+      "moetta6",
+      "under-the-sign",
+      "addicted-to-the-void"
+    ],
+    "lerreur": {
+      "name": "lerreur",
+      "theme": "dark",
+      "backgroundRgba": [
+        204,
+        166,
+        207,
+        255
+      ],
+      "highlightRgba": [
+        32,
+        33,
+        92,
+        255
+      ],
+      "title": "L’erreür",
+      "subtitle": "Watch the film",
+      "videoLoopUrl": "/static/images/casestudies/lerreur/previewLerreur.mp4",
+      "videoLoopMobile": "/static/images/casestudies/lerreur/covermobile.jpg",
+      "player": "lerreur",
+      "description": "Two childish souls roaming in streets they already know too much, looking for distractions to enrich their daily poor.",
+      "credits": "Client : L’erreur\nDirector: Clément Lesaicherre\nWritten by: Eliot Saour & Augustin Moreau\nStarring: Eliot Saour & Augustin Moreau\nSong: L’erreur - Demain la poussière (Flower Tips Production)\nDirector of production: Léa Reguillot\nProduction: Rove\n",
+      "medias": [
+        {
+          "type": "image",
+          "src": "/static/images/casestudies/lerreur/image1.jpg"
+        },
+        {
+          "type": "image",
+          "src": "/static/images/casestudies/lerreur/image2.jpg"
+        },
+        {
+          "type": "image",
+          "src": "/static/images/casestudies/lerreur/image3.jpg"
+        },
+        {
+          "type": "image",
+          "src": "/static/images/casestudies/lerreur/image4.jpg"
+        },
+        {
+          "type": "image",
+          "src": "/static/images/casestudies/lerreur/image5.jpg"
+        }
+      ],
+      "meta": {
+        "title": "Demain la poussière / L’erreür - Rove",
+        "description": "Music video for french rapper L’erreür. Directed by Clément Lesaicherre - Starring Eliot Saour & Augustin Moreau - Music by L’erreür (Flower Tips Production) - DOP Léa Reguillot - Produced by Rove",
+        "image": "/static/images/casestudies/lerreur/og.jpg",
+        "url": "https://rove.fr/lerreur"
+      }
+    },
+    "moetta6": {
+      "name": "moetta6",
+      "theme": "dark",
+      "backgroundRgba": [
+        175,
+        215,
+        221,
+        255
+      ],
+      "highlightRgba": [
+        32,
+        33,
+        92,
+        255
+      ],
+      "title": "Moetta6",
+      "subtitle": "Watch the film",
+      "videoLoopUrl": "/static/images/casestudies/moetta/previewMoetta.mp4",
+      "videoLoopMobile": "/static/images/casestudies/moetta/covermobile.jpg",
+      "player": "moetta6",
+      "description": "They were reading a guestbook, in a random tavern, when they took a closer look at the story written by Théo, exactly ten years ago. This is the tale of Matteo exploring what has changed the life of Théo.",
+      "credits": "Written & Directed: Clément Lesaicherre\nProduction: Rove\nMain character: Matteo\nMusic: Tristan Fong / The Courteous Family",
+      "medias": [
+        {
+          "type": "image",
+          "src": "/static/images/casestudies/moetta/image1.jpg"
+        },
+        {
+          "type": "image",
+          "src": "/static/images/casestudies/moetta/image2.jpg"
+        },
+        {
+          "type": "image",
+          "src": "/static/images/casestudies/moetta/image3.jpg"
+        },
+        {
+          "type": "image",
+          "src": "/static/images/casestudies/moetta/image4.jpg"
+        },
+        {
+          "type": "image",
+          "src": "/static/images/casestudies/moetta/image5.jpg"
+        }
+      ],
+      "meta": {
+        "title": "Moetta6 — Rove",
+        "description": "Matteo is roving through stories of Iceland - Directed by Clément Lesaicherre - Starring Matteo Gibellini - Music by Tristan Fong / The Courteous Family - Produced by Rove",
+        "image": "/static/images/casestudies/moetta/og.jpg",
+        "url": "https://rove.fr/moetta6"
+      }
+    },
+    "under-the-sign": {
+      "name": "under-the-sign",
+      "theme": "dark",
+      "backgroundRgba": [
+        113,
+        184,
+        163,
+        255
+      ],
+      "highlightRgba": [
+        248,
+        207,
+        71,
+        255
+      ],
+      "title": "Under The Sign",
+      "subtitle": "Watch the film",
+      "videoLoopUrl": "/static/images/casestudies/under/previewUnder.mp4",
+      "videoLoopMobile": "/static/images/casestudies/under/covermobile.jpg",
+      "player": "under-the-sign",
+      "description": "The Man made world is built up of fragments of the past. Rehabilitation projects by Under the Sign register into an artisanal & sustainable movement, exploring the capacity to create from something existing but forgotten.",
+      "credits": "Client: Under The Sign Brand\nDirector: Léo Sicot\nStarring: Fabio & Jérémy\nPhotography: Lilian Bachelet\nSong: Paul Claeys\nMaking of: Felix\nSpecial thanks to: Amaury Browaeys\nStaff: Côme Bachelet - Vincent Pisciotta - Alex Andse - Didier Bachelet\nVFX: Felix Sikora\nDirector of production: Léa Reguillot\nProduction: Rove",
+      "medias": [
+        {
+          "type": "image",
+          "src": "/static/images/casestudies/under/image1.jpg"
+        },
+        {
+          "type": "image",
+          "src": "/static/images/casestudies/under/image2.jpg"
+        },
+        {
+          "type": "image",
+          "src": "/static/images/casestudies/under/image3.jpg"
+        },
+        {
+          "type": "image",
+          "src": "/static/images/casestudies/under/image4.jpg"
+        },
+        {
+          "type": "image",
+          "src": "/static/images/casestudies/under/image5.jpg"
+        }
+      ],
+      "meta": {
+        "title": "Under The Sign — Rove",
+        "description": "Brand movie for the Rehabilitation Project of Under The Sign designer brand. Directed by Léo Sicot - Music by Paul Claeys - Starring Fabio & Jeremy - Photography by Lilian Bachelet - VFX by Felix Sikora - DOP Léa Reguillot -Produced by Rove",
+        "image": "/static/images/casestudies/under/og.jpg",
+        "url": "https://rove.fr/under-the-sign"
+      }
+    },
+    "addicted-to-the-void": {
+      "name": "addicted-to-the-void",
+      "theme": "dark",
+      "backgroundRgba": [
+        175,
+        215,
+        221,
+        255
+      ],
+      "highlightRgba": [
+        213,
+        77,
+        46,
+        255
+      ],
+      "title": "Addicted To The Void",
+      "subtitle": "Watch the film",
+      "videoLoopUrl": "/static/images/casestudies/addicted/previewAddicted.mp4",
+      "videoLoopMobile": "/static/images/casestudies/addicted/covermobile.jpg",
+      "player": "addicted-to-the-void",
+      "description": "Mountain lover Antoine Cretinon shares some of his thoughts about highlining, and how what may have started as a simple challenge now plays an important role in his daily life.",
+      "credits": "Client: Salewa & Slack Mountain\nFeaturing: Antoine Cretinon\nCinematography: Clément Lesaicherre & Simon Corompt\nAerial cinematography: Maxime Berthelot\nEdit: Clément Lesaicherre\nGrade: Simon Corompt\nDOP: Léa Reguillot\nOriginal score: Ruben Karmazyn\nSound design & mix: Ruben Karmazyn\nProduction: Unlikely Studio x Rove\nSpecials thanks to : Théo Vaissier - Matthieu Landeche - Florian Piegay - Vincent Farge - Laure Cretinon\nLine opened by Roddy Delsaux (Rodline)",
+      "medias": [
+        {
+          "type": "video",
+          "src": "/static/images/casestudies/addicted/makingof.mp4"
+        },
+        {
+          "type": "image",
+          "src": "/static/images/casestudies/addicted/image2.jpg"
+        },
+        {
+          "type": "image",
+          "src": "/static/images/casestudies/addicted/image3.jpg"
+        },
+        {
+          "type": "image",
+          "src": "/static/images/casestudies/addicted/image4.jpg"
+        },
+        {
+          "type": "image",
+          "src": "/static/images/casestudies/addicted/image5.jpg"
+        }
+      ],
+      "meta": {
+        "title": "Addicted To The Void — Rove",
+        "description": "Salewa brand shares mountain lover Antoine Cretinon stories about highlining. Directed by Clément Lesaicherre - Featuring: Antoine Cretinon - Music by Ruben Karmazyn - DOP Léa Reguillot - Produced by Unlikely Studio x Rove",
+        "image": "/static/images/casestudies/addicted/og.jpg",
+        "url": "https://rove.fr/addicted-to-the-void"
+      }
+    }
+  }
+}
