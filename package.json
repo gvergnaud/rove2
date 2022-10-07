@@ -34,7 +34,7 @@
   },
   "devDependencies": {
     "@types/lodash": "^4.14.149",
-    "@types/node": "^12.12.17",
+    "@types/node": "^18.8.3",
     "@types/react": "^16.9.16",
     "eslint": "^5.13.0",
     "eslint-config-esnext": "^4.0.0",
@@ -42,8 +42,5 @@
     "eslint-plugin-react-hooks": "^1.6.0",
     "glslify-loader": "^2.0.0",
     "prettier": "^1.19.1"
-  },
-  "volta": {
-    "node": "16.17.1"
   }
 }
