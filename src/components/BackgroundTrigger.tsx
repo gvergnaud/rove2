@@ -1,5 +1,5 @@
 import React from 'react';
-import { update, Animation, currentColorRef } from './Background';
+import { updateAnimation, Animation, currentColorRef } from './Background';
 import { ScrollContext } from '../hooks/useScroller';
 import { useWindowSize } from '../hooks/useWindowSize';
 import useAppState from '../hooks/useAppState';
@@ -72,11 +72,9 @@ const BackgroundTrigger: React.FC<Props> = (
         actions.setTheme(theme);
 
         if (!isEqual(color, currentColorRef.current)) {
-          update({
-            animation: {
-              type: isForward ? Animation.Forward : Animation.Backward,
-              color
-            }
+          updateAnimation({
+            type: isForward ? Animation.Forward : Animation.Backward,
+            color
           });
         }
       }

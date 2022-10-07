@@ -12,15 +12,11 @@ import {
   yellowRgba,
   mqNotSmall,
   valNumber,
-  white,
   responsive,
   fontSize,
   autoGrow,
-  purpleRgba,
   greenRgba,
-  pinkRgba,
-  fsMedium,
-  fsLarge
+  pinkRgba
 } from '../../../style/variables';
 import { appear3D, fadeIn } from '../../../style/animations';
 
@@ -43,7 +39,7 @@ import { cn } from '../../../utils/css';
 import { createLinkProps } from '../../../routes';
 import useRelativeScrollYCssVar from '../../../hooks/useRelativeScrollYCssVar';
 import NormalImage from '../../Image/NormalImage';
-import { update, Animation } from '../../Background';
+import { updateAnimation, Animation } from '../../Background';
 
 type Props = {
   nextProjectName: string;
@@ -506,13 +502,11 @@ const NextProjectLink = ({ nextProject, nextProjectName, project }) => {
       onMouseEnter={() => {
         if (hasClickedRef.current) return;
         hasEnteredRef.current = true;
-        update({
-          animation: {
-            ease: 'power2.out',
-            type: Animation.SlightForward,
-            color: nextProject.backgroundRgba,
-            duration: 1.4
-          }
+        updateAnimation({
+          ease: 'power2.out',
+          type: Animation.SlightForward,
+          color: nextProject.backgroundRgba,
+          duration: 1.4
         });
       }}
       onClick={go => {
@@ -522,13 +516,11 @@ const NextProjectLink = ({ nextProject, nextProjectName, project }) => {
       onMouseLeave={() => {
         if (hasClickedRef.current) return;
         if (!hasEnteredRef.current) return;
-        update({
-          animation: {
-            type: Animation.SlightBackward,
-            color: project.backgroundRgba,
-            duration: 0.6,
-            ease: 'power2.inOut'
-          }
+        updateAnimation({
+          type: Animation.SlightBackward,
+          color: project.backgroundRgba,
+          duration: 0.6,
+          ease: 'power2.inOut'
         });
       }}
       theme={nextProject.theme}

@@ -4,7 +4,6 @@ import { BehaviorSubject } from 'rxjs';
 import isEqual from 'lodash/isEqual';
 import { float, vec4, texture, bool } from '../utils/layouts';
 import ShaderToy from './ThreeCanvas/ShaderToy';
-// @ts-ignore
 import transition from '../shaders/transition.glsl';
 import { blackRgba, ColorRgba } from '../style/variables';
 import { distinctUntilChanged, filter, tap } from 'rxjs/operators';
@@ -13,14 +12,22 @@ import { useScrollYRef } from '../hooks/useScroller';
 import { useAnimationRef } from '../hooks/useAnimation';
 import useValueRef from '../hooks/useValueRef';
 
+export enum Animation {
+  Forward = 'forward',
+  Backward = 'backward',
+  SlightForward = 'SlightForward',
+  SlightBackward = 'SlightBackward'
+}
+
+type AnimationProps = {
+  type: Animation;
+  color: ColorRgba;
+  duration?: number;
+  ease?: string;
+};
+
 type Props = {
   className?: string;
-  animation?: {
-    type: Animation;
-    color: ColorRgba;
-    duration?: number;
-    ease?: string;
-  };
 };
 
 type State =
@@ -54,43 +61,8 @@ function usePrevious<T>(value: T) {
   return previousValueRef.current;
 }
 
-export enum Animation {
-  Forward = 'forward',
-  Backward = 'backward',
-  SlightForward = 'SlightForward',
-  SlightBackward = 'SlightBackward'
-}
-
 export const currentColorRef = {
   current: undefined
-};
-
-const update$ = new BehaviorSubject({ animation: undefined });
-
-export const update = (updates: Partial<Props>) =>
-  update$.next({ ...update$.value, ...updates });
-
-const props$ = update$.pipe(
-  filter(x => !!x),
-  distinctUntilChanged(
-    (a, b) =>
-      a.animation &&
-      b.animation &&
-      isEqual(a.animation.color, b.animation.color) &&
-      isEqual(a.animation.type, b.animation.type)
-  ),
-  tap(({ animation }) => {
-    currentColorRef.current = animation?.color;
-  })
-);
-
-const withObservable = obs => Component => props => {
-  const additionalProps = useObservable(obs, {});
-
-  React.useEffect(() => {
-    update(props);
-  }, [props]);
-  return <Component {...additionalProps} />;
 };
 
 let animatedRef;
@@ -98,15 +70,31 @@ let animatedRef;
 const defaultDuration = 1.4;
 const defaultEase = 'power2.out';
 
-function Background({
-  className,
-  animation = {
-    type: Animation.Forward,
-    color: blackRgba,
-    duration: defaultDuration,
-    ease: defaultEase
-  }
-}: Props) {
+const defaultAnimationProps: AnimationProps = {
+  type: Animation.Forward,
+  color: blackRgba,
+  duration: defaultDuration,
+  ease: defaultEase
+};
+
+const update$ = new BehaviorSubject<AnimationProps>(defaultAnimationProps);
+
+export const updateAnimation = (animation: AnimationProps) =>
+  update$.next(animation);
+
+const animation$ = update$.pipe(
+  filter(x => !!x),
+  distinctUntilChanged(
+    (a, b) => a && b && isEqual(a.color, b.color) && isEqual(a.type, b.type)
+  ),
+  tap(animation => {
+    currentColorRef.current = animation.color;
+  })
+);
+
+export default function Background({ className }: Props) {
+  const animation = useObservable(animation$, defaultAnimationProps);
+
   const [state, setState] = React.useState<State>({
     type: 'idle',
     color: animation.color
@@ -115,7 +103,6 @@ function Background({
   const stateRef = useValueRef(state);
 
   const [previousColorRef, currentColorRef] = useTwoLastValues(animation.color);
-  const previousType = usePrevious(animation.type);
 
   const scrollYRef = useScrollYRef();
 
@@ -224,5 +211,3 @@ function Background({
     />
   );
 }
-
-export default withObservable(props$)(Background);

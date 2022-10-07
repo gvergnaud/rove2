@@ -2,7 +2,7 @@ import React from 'react';
 import Router from 'next/router';
 import useAppState from './useAppState';
 import { delay } from '../utils/promises';
-import { update, Animation } from '../components/Background';
+import { updateAnimation, Animation } from '../components/Background';
 import { ColorRgba } from '../style/variables';
 import { Theme } from '../state';
 
@@ -36,12 +36,12 @@ export default function usePageTransition() {
       }
 
       if (fromColor) {
-        update({ animation: { type, color: fromColor, duration: 0 } });
+        updateAnimation({ type, color: fromColor, duration: 0 });
         await delay(16);
       }
       actions.hideInterface();
       await delay(400);
-      update({ animation: { type, color, ease, duration } });
+      updateAnimation({ type, color, ease, duration });
       await delay(650);
       actions.setTheme(theme);
       await delay(400);

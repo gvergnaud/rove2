@@ -13,7 +13,7 @@ import {
   blackRgba
 } from '../style/variables';
 import { delay } from '../utils/promises';
-import { update, Animation } from './Background';
+import { updateAnimation, Animation } from './Background';
 import useValueRef from '../hooks/useValueRef';
 import copy from '../copy';
 import LogoIndependantLetters from './ui/LogoIndependantLetters';
@@ -76,17 +76,14 @@ export default function Loader() {
 
       await delay(700);
 
-      update({
-        animation: {
-          type: Animation.Forward,
-          color:
-            stateRef.current.route.name === 'casestudy'
-              ? copy.caseStudy[stateRef.current.route.params.name]
-                  .backgroundRgba
-              : stateRef.current.route.name === 'home'
-              ? whiteRgba
-              : blackRgba
-        }
+      updateAnimation({
+        type: Animation.Forward,
+        color:
+          stateRef.current.route.name === 'casestudy'
+            ? copy.caseStudy[stateRef.current.route.params.name].backgroundRgba
+            : stateRef.current.route.name === 'home'
+            ? whiteRgba
+            : blackRgba
       });
 
       await delay(1400);
