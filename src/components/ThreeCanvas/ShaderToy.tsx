@@ -37,7 +37,7 @@ const ShaderToy = ({
   const elRef = React.useRef(null);
   const onScroll = React.useContext(ScrollContext);
   const uniformsRef = React.useRef<ObjectOf<any>>({});
-  const [scene, setScene] = React.useState();
+  const [scene, setScene] = React.useState<ThreeScene | undefined>();
   const offsetRef = useOffsetRef(elRef);
 
   React.useEffect(() => {

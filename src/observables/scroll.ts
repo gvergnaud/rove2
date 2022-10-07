@@ -27,7 +27,7 @@ export const scroll$ = (process.browser
 );
 
 export const wheelDelta$ = process.browser
-  ? fromEvent<MouseWheelEvent>(window, 'wheel', { passive: true }).pipe(
+  ? fromEvent<WheelEvent>(window, 'wheel', { passive: true }).pipe(
       map(e => ({
         deltaX: between(-100, 100, e.deltaX),
         deltaY: between(-100, 100, e.deltaY)

@@ -47,7 +47,7 @@ export default function usePageTransition() {
       await delay(400);
       Router.push(href, as);
 
-      await new Promise((resolve, reject) => {
+      await new Promise<void>((resolve, reject) => {
         Router.events.on('routeChangeComplete', () => resolve());
         Router.events.on('routeChangeError', e => reject(e));
       });

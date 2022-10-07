@@ -95,11 +95,11 @@ export default function Loader() {
       actions.setReady();
     };
 
-    const documentReady = new Promise(resolve => {
+    const documentReady = new Promise<void>(resolve => {
       if (window.document.readyState) resolve();
-
-      window.addEventListener('load', resolve);
-      return () => window.removeEventListener('load', resolve);
+      const onLoad = () => resolve();
+      window.addEventListener('load', onLoad);
+      return () => window.removeEventListener('load', onLoad);
     });
 
     type Media = { type: 'image' | 'video'; src: string };
